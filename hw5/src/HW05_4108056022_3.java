@@ -1,5 +1,6 @@
 public class HW05_4108056022_3 extends LLK{
 
+    boolean found = false;
     public class DataItem{
         public double slope;
         public DataItem nextItem;
@@ -27,23 +28,64 @@ public class HW05_4108056022_3 extends LLK{
 
     @Override
     public boolean checkLLK(int[][] array) {
-        int size = (int)(array.length*1.7);
-        double slope;
-        DataItem[] hashArray = new DataItem[size];
-
-        for(int i = 0; i < array.length; i++){
-            for(int j = i+1; j < array.length;j++){
-                slope = (double)(array[i][1] - array[j][1]) / (double)(array[i][0]-array[j][0]);
-                if(insert(hashArray,slope, size)) return true;
-            }
+        Thread[] t = new Thread[5];
+        int size = 1 << ((int) Math.ceil(Math.log10(array.length) / 0.3010));
+        for(int threadIndex = 0; threadIndex < 5; threadIndex++){
+            t[threadIndex] = new Thread(()-> {
+                    double slope;
+                    DataItem[] hashArray = new DataItem[size];
+                    for(int i = 0; i < array.length; i+=5){
+                        for(int j = i+1; j < array.length;j++){
+                            slope = (double)(array[i][1] - array[j][1]) / (double)(array[i][0]-array[j][0]);
+                            if(insert(hashArray,slope, size)) {
+                                found = true;
+                                break;
+                            }
+                        }
+                        if(found) break;
+                    }
+            });
+            t[threadIndex].start();
         }
-        return false;
+        try{
+            t[0].join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try{
+            t[1].join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try{
+            t[2].join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try{
+            t[3].join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try{
+            t[4].join();
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return found;
     }
     public static void main(String[] args) {
         int[][] array = {{1,1},
-                {0,2},
+                {2,2},
                 {3,3}};
         HW05_4108056022_3 test = new HW05_4108056022_3();
         System.out.println(test.checkLLK(array));
     }
 }
+
