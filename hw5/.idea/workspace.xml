@@ -49,7 +49,7 @@
       <recent name="D:\Documents\University\2.2\Algorithm\Algorithm-HW\hw5\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HW05_4108056022_2">
     <configuration name="HW05_4108056022_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HW05_4108056022_1" />
       <module name="hw5" />
@@ -57,8 +57,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HW05_4108056022_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HW05_4108056022_2" />
+      <module name="hw5" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HW05_4108056022_2" />
         <item itemvalue="Application.HW05_4108056022_1" />
       </list>
     </recent_temporary>
