@@ -29,16 +29,16 @@ public class HW05_4108056022_1 extends LLK{
 
     @Override
     public boolean checkLLK(int[][] array) {
-        Thread[] t = new Thread[8];
+        Thread[] t = new Thread[7];
         int size = (int)(array.length*1.7);
         found = false;
-        for(int threadIndex = 0; threadIndex < 8; threadIndex++){
+        for(int threadIndex = 0; threadIndex < 7; threadIndex++){
             final int index = threadIndex;
             t[threadIndex] = new Thread(()-> {
                 DataItem[] hashArray=new DataItem[size];
                 double slope;
-                for(int i = array.length-1-index; i > -1; i-=8){
-                    for(int j = i-1; j>-1 ;j--){
+                for(int i = index; i < array.length; i+=7){
+                    for(int j = array.length-1; j>-1 ;j--){
                         slope = (double)(array[i][0] - array[j][0]) / (double)(array[i][1] - array[j][1]);
                         if(insert(hashArray,slope, size)) {
                             found = true;
@@ -51,7 +51,7 @@ public class HW05_4108056022_1 extends LLK{
             });
             t[threadIndex].start();
         }
-        for(int threadIndex = 0; threadIndex < 8; threadIndex++){
+        for(int threadIndex = 0; threadIndex < 7; threadIndex++){
             try{
                 t[threadIndex].join();
             }

@@ -27,7 +27,6 @@ public class HW05_4108056022_3 extends LLK{
 
     @Override
     public boolean checkLLK(int[][] array) {
-        Thread[] t = new Thread[10];
         int size = (int)(array.length*1.7);
                 DataItem[] hashArray=new DataItem[size];
                 double slope;
