@@ -5,7 +5,6 @@ public class HW05_4108056022_2 extends LLK{
     public class DataItem{
         public double slope;
         public DataItem nextItem;
-
         public DataItem(double slope, DataItem nextItem){
             this.slope = slope; this.nextItem = nextItem;
         }
@@ -29,15 +28,15 @@ public class HW05_4108056022_2 extends LLK{
 
     @Override
     public boolean checkLLK(int[][] array) {
-        Thread[] t = new Thread[15];
+        Thread[] t = new Thread[7];
         int size = (int)(array.length*1.7);
         found = false;
-        for(int threadIndex = 0; threadIndex < 15; threadIndex++){
+        for(int threadIndex = 0; threadIndex < 7; threadIndex++){
             final int index = threadIndex;
             t[threadIndex] = new Thread(()-> {
                 DataItem[] hashArray=new DataItem[size];
                 double slope;
-                for(int i = array.length-1-index; i > -1; i-=15){
+                for(int i = array.length-1-index; i > -1; i-=7){
                     for(int j = 0; j < i;j++){
                         slope = (double)(array[i][0] - array[j][0]) / (double)(array[i][1] - array[j][1]);
                         if(insert(hashArray,slope, size)) {
@@ -51,7 +50,7 @@ public class HW05_4108056022_2 extends LLK{
             });
             t[threadIndex].start();
         }
-        for(int threadIndex = 0; threadIndex < 15; threadIndex++){
+        for(int threadIndex = 0; threadIndex < 7; threadIndex++){
             try{
                 t[threadIndex].join();
             }
