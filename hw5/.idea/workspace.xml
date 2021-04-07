@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64dd48cd-0cfe-4d66-a3ff-b23ddb4717a7" name="Default Changelist" comment="fixed multy thread hash problem, and corrected version 1">
+    <list default="true" id="64dd48cd-0cfe-4d66-a3ff-b23ddb4717a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_2$DataItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_2$DataItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hw5/HW05_4108056022_2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HW05_4108056022_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW05_4108056022_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HW05_4108056022_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW05_4108056022_2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HW05_4108056022_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW05_4108056022_4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HW05_4108056022_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HW05_4108056022_3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +57,7 @@
       <recent name="D:\Documents\University\2.2\Algorithm\Algorithm-HW\hw5\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HW05_4108056022_4">
+  <component name="RunManager" selected="Application.HW05_4108056022_3">
     <configuration name="HW05_4108056022_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HW05_4108056022_1" />
       <module name="hw5" />
@@ -92,11 +95,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HW05_4108056022_3" />
         <item itemvalue="Application.HW05_4108056022_4" />
         <item itemvalue="Application.HW05_4108056022_2" />
         <item itemvalue="Application.HW05_4108056022_1" />
         <item itemvalue="Application.HW05_4108056022_5" />
-        <item itemvalue="Application.HW05_4108056022_3" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617689779741</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="testing 15 and 20 threads">
+      <created>1617725796523</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617725796523</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -163,6 +173,7 @@
     <MESSAGE value="testing" />
     <MESSAGE value="hash version with multyThread" />
     <MESSAGE value="fixed multy thread hash problem, and corrected version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed multy thread hash problem, and corrected version 1" />
+    <MESSAGE value="testing 15 and 20 threads" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing 15 and 20 threads" />
   </component>
 </project>
