@@ -1,6 +1,5 @@
 public class HW06_4108056022_01 extends Dessert_Desert{
 
-
     public int solution(int[] arr){
         int n = arr.length;
         int[] maxOfLeft = new int[n];
