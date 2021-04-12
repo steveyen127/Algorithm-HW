@@ -11,7 +11,7 @@ public class HW06_4108056022_5 extends Dessert_Desert{
         int m = n-1;
         for(int i = 1; i < n; i++){
             maxOfLeft[i] = Math.max(maxOfLeft[i-1], arr[i]);
-            minOfRight[i] = Math.min(minOfRight[n-i], arr[m-i]);
+            minOfRight[m-i] = Math.min(minOfRight[n-i], arr[m-i]);
         }
         int ans=0;
         for (int i=0;i<n;i++){
