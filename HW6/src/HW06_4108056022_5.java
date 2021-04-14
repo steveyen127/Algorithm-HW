@@ -23,17 +23,17 @@ public class HW06_4108056022_5 extends Dessert_Desert{
     @Override
     public int[] maxBlocks(int[][] inputArr){
         int[] ans = new int[inputArr.length];
-        Thread[] multiThread = new Thread [15];
-        for (int threadIndex = 0; threadIndex < 15; threadIndex++){
+        Thread[] multiThread = new Thread [8];
+        for (int threadIndex = 0; threadIndex < 8; threadIndex++){
             final int index = threadIndex;
             multiThread[threadIndex] = new Thread(()->{
-                for (int i =index; i < inputArr.length; i+=15){
+                for (int i =index; i < inputArr.length; i+=8){
                     ans[i] = solution(inputArr[i]);
                 }
             });
             multiThread[threadIndex].start();
         }
-        for(int i = 0; i < 15; i++){
+        for(int i = 0; i < 8; i++){
             try{
                 multiThread[i].join();
             }catch(InterruptedException e){
